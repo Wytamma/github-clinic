@@ -13,6 +13,6 @@ pip install -r requirements.txt
 ```
 
 ## Usage 
-```
-python ncbi_nucleotide_counter.py U00096 your.email@example.com
+```bash
+python ncbi_nucleotide_counter.py NC_045512 your.email@example.com
 ```
