@@ -3,12 +3,14 @@ from Bio import Entrez, SeqIO
 
 def get_genome(id):
     """Fetch a genome from NCBI and return as a SeqRecord."""
+    print(f"Fetching genome {id} from NCBI...")
     Entrez.email = args.email
     handle = Entrez.efetch(db="nucleotide", id=id, retype="gb", retmode="text")
     return SeqIO.read(handle, "genbank")
 
 def count_nucleotides(seq_record):
     """Count the nucleotides in a SeqRecord and return as a dictionary."""
+    print(f"Counting nucleotides in {seq_record.id}...")
     nucleotide_counts = {
         "A": 0,
         "C": 0,
