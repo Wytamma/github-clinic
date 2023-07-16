@@ -4,7 +4,7 @@ from Bio import Entrez, SeqIO
 def get_genome(id):
     """Fetch a genome from NCBI and return as a SeqRecord."""
     Entrez.email = args.email
-    handle = Entrez.efetch(db="nucleotide", id=id, rettype="gb", retmode="text")
+    handle = Entrez.efetch(db="nucleotide", id=id, retype="gb", retmode="text")
     return SeqIO.read(handle, "genbank")
 
 def count_nucleotides(seq_record):
